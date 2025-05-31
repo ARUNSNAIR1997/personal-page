@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/side" element={<SideBar/>}/>
-        <Route path='/home' element={<HomePage/>}/>
+        <Route path='/' element={<HomePage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/education' element={<Education/>}/>
         <Route path='/experience' element={<Experience/>}/>
