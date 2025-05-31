@@ -1,0 +1,521 @@
+/* Fonts */
+/* :root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+} */
+
+
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f4fafd;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #040b14;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #151f2b;
+  --contrast-color: #ffffff;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.header{
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  width: 300px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.header .profile-img img{
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.header .logo{
+  line-height: 1;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+}
+
+
+
+
+.header .logo .sitename{
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .social-links{
+  margin: 0 0 20px 0;
+}
+
+.header .social-links a{
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  margin: 0 2px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.header .social-links a:hover{
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+}
+
+/* @media (min-width: 1200px) {
+
+  .header~main,
+  .header~#footer {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -100%;
+  }
+} */
+
+@media (max-width: 1199px) {
+  .header {
+    left: -100%;
+  }
+
+  .header.show {
+    left: 0;
+  }
+}
+
+.header .header-toggle{
+  columns: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.header .header-toggle:hover{
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15% );
+}
+
+.navmenu{
+  padding: 0;
+  z-index: 9997;
+}
+
+.navmenu ul{
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+.navmenu a{
+  color: var(--nav-color);
+  padding: 15px 10px;
+  font-family: var(--nav-font);
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* transition: 0.3s;
+  width: 100%; */
+}
+
+.navmenu a .navicon{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navmenu a:hover{
+  color: var(--nav-hover-color);
+}
+
+.navmenu a:hover .navicon{
+  color: var(--accent-color);
+}
+
+
+/* Global section */
+
+section,
+.section{
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: clip;
+}
+
+/* Global section-title */
+
+.section-title{
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.section-title h2{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: 0;
+}
+
+.section-title p{
+  margin-bottom: 0;
+}
+
+
+/* hero */
+
+.hero{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img{
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before{
+  content: "";
+  background-color: color-mix(in srgb, var(--background-color), transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container{
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+
+/* about */
+
+.about .content h2{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about .content ul{
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong{
+  margin-right: 10px;
+}
+
+.about .content ul i{
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+
+/* home */
+
+.sidebar-container {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* @media (max-width: 991px) {
+  .sidebar-container {
+    max-width: 100%;
+  }
+} */
+
+.hero-section {
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-section button{
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.hero-section button:hover{
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) transparent 50% );
+}
+
+/* .object-fit-cover {
+  object-fit: cover;
+} */
+
+/* education */
+
+.skill-list{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skill-img{
+  width: 40px;
+}
+
+.skills ul{
+  list-style: none;
+}
+
+.skill-name{
+  text-align: center;
+}
+
+.skill-icon{
+  text-align: center;
+}
+
+.skill-head{
+  text-align: center;
+}
+
+.skills{
+  padding: 20px 0;
+}
+
+/* experience */
+
+.experienceDiv ul{
+  list-style: none;
+}
+
+.experienceDiv ul li{
+  margin-top: 10px;
+}
+
+.experienceDiv ul span{
+  color: #747474;
+}
+
+
+/* project */
+
+.col-lg-6{
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.col-lg-6:hover{
+  -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.project .card a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .card a img{
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.project .card a img:hover{
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+
+/* contact */
+
+
+.contact .info-wrap{
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* @media (max-width: 575px) {
+  .contact .info-wrap {
+    padding: 20px;
+  }
+} */
+
+.contact .info-item{
+  margin-bottom: 40px;
+}
+
+.contact .info-item i{
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item:hover i{
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.contact .info-item h3{
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p{
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.contact .email-form{
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+}
+
+.contact .email-form .sendmsg{
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+
+.contact .email-form button:hover{
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+
+
+/* footer */
+
+.footer{
+  color: var(--contrast-color);
+  /* background-color: var(--background-color); */
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background-image: url("src/assets/img/6203606.jpg");
+}
