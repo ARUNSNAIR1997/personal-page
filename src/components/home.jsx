@@ -35,7 +35,7 @@ function HomePage(){
             <div className="container position-relative py-5">
             <h1 className="display-4">Arun S Nair</h1>
             <p className="lead">MERN Stack Developer</p>
-            <a href="src/assets/doc/arun.pdf"><button type="file">Resume</button></a>
+            <a href="/doc/arun.pdf"><button type="file">Resume</button></a>
             </div>
     </section>
 
