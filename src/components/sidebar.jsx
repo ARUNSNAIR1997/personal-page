@@ -26,7 +26,7 @@ function SideBar(){
   onClick={toggleSidebar}
 ></i>
           <div className="profile-img">
-            <img src="src/assets/img/profile.jpg" alt="" className="img-fluid rounded-circle"/>
+            <img src="/img/profile.jpg" alt="" className="img-fluid rounded-circle"/>
           </div>
 
           <a href="/home" className="logo">
