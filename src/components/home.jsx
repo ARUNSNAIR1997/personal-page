@@ -31,7 +31,7 @@ function HomePage(){
       {/* Main Content */}
 <div className="flex-fill main-content">
     <section id="hero" className="hero-section text-center text-white d-flex align-items-center justify-content-center position-relative">
-          <img src="public/img/6203606.jpg" alt="Hero" className="w-100 h-100 object-fit-cover position-absolute top-0 start-0"/>
+          <img src="./public/img/6203606.jpg" alt="Hero" className="w-100 h-100 object-fit-cover position-absolute top-0 start-0"/>
             <div className="container position-relative py-5">
             <h1 className="display-4">Arun S Nair</h1>
             <p className="lead">MERN Stack Developer</p>
