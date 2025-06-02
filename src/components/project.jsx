@@ -48,7 +48,7 @@ function Projects(){
             <div className="card-body">
                 <h5 className="card-title">Swiggy title</h5>
                 <p className="card-text">Developed a static website using HTML, CSS, Bootstrap.</p>
-                <a href="#"><img src="/img/git.png" alt="" /></a>
+                <a href="https://github.com/ARUNSNAIR1997/food_website.git"><img src="/img/git.png" alt="" /></a>
             </div>
         </div>
         </div>
