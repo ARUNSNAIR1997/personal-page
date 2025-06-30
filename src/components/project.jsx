@@ -7,7 +7,40 @@ function Projects(){
         <div className="container section-title">
             <h2>My Projects</h2>
         </div>
-        <div className="row container-fluid">
+        <div className="row container">
+        <div className="col-lg-6">
+        <div className="card">
+        <img src="/img/turf.png" class="card-img-top" alt="..."/>
+            <div className="card-body">
+                <h5 className="card-title">Turf Booking Website</h5>
+                <p className="card-text">Developed a Turf Management Application using MERN stack. <br/>
+                    Features Provided : Booking Turf, Image
+                    sharing for social engagement, Manage
+                    Users, View - Turf Availability, Turf Details,
+                    Upcoming Tournaments and Live Scores.</p>
+                <a href="https://github.com/ARUNSNAIR1997/AthletiSphere.git"><img src="/img/git.png" alt="" /></a>
+            </div>
+        </div>
+        </div>
+        <div className="col-lg-6">
+        <div className="card">
+        <img src="/img/book.png" class="card-img-top" alt="..."/>
+            <div className="card-body">
+                <h5 className="card-title">Book Library</h5>
+                <p className="card-text">A full-stack web application to manage a
+                    personal book collection. Users can add,
+                    update, delete, and mark books as read or
+                    unread.
+                    </p>
+                <a href="#"><img src="/img/git.png" alt="" /></a>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+
+
+ <div className="row container">
         <div className="col-lg-6">
         <div className="card">
         <img src="/img/ecommerce.png" class="card-img-top" alt="..."/>
@@ -28,10 +61,10 @@ function Projects(){
             </div>
         </div>
         </div>
-        
         </div>
 
-        <div className="row container mt-4">
+
+        <div className="row container">
 <div className="col-lg-6">
         <div className="card">
         <img src="/img/travel.png" class="card-img-top" alt="..."/>
@@ -53,6 +86,7 @@ function Projects(){
         </div>
         </div>
         </div>
+        
 
         </section>
         </>

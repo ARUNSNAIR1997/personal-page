@@ -25,8 +25,8 @@ function AboutPage(){
                 <ul>
                     <li><i className="bi bi-chevron-right"></i> <strong>Frontend:</strong>  <span>HTML, CSS, JavaScript, React.js, Bootstrap</span> </li>
                     <li><i className="bi bi-chevron-right"></i> <strong>Backend:</strong>  <span>Node.js, Express.js</span> </li>
-                    <li><i className="bi bi-chevron-right"></i> <strong>Database:</strong>  <span>MongoDB</span> </li>
-                    <li><i className="bi bi-chevron-right"></i> <strong>Tools:</strong>  <span>GitHub, Postman, VSCode</span> </li>
+                    <li><i className="bi bi-chevron-right"></i> <strong>Database:</strong>  <span>MongoDB, Mongoose</span> </li>
+                    <li><i className="bi bi-chevron-right"></i> <strong>Tools:</strong>  <span>GitHub, VSCode</span> </li>
                     <li><i className="bi bi-chevron-right"></i> <strong>Deployment:</strong>  <span>Netlify, Render</span> </li>
                 </ul>
             </div>
