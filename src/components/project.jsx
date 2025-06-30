@@ -32,7 +32,7 @@ function Projects(){
                     update, delete, and mark books as read or
                     unread.
                     </p>
-                <a href="#"><img src="/img/git.png" alt="" /></a>
+                <a href="https://github.com/ARUNSNAIR1997/book.git"><img src="/img/git.png" alt="" /></a>
             </div>
         </div>
         </div>
@@ -47,7 +47,7 @@ function Projects(){
             <div className="card-body">
                 <h5 className="card-title">E-Commerce Shopping Website</h5>
                 <p className="card-text">Developed a full-featured dynamic online shopping website using Express-generator</p>
-                <a href="#"><img src="/img/git.png" alt="" /></a>
+                <a href="https://github.com/ARUNSNAIR1997/e-commerce.git"><img src="/img/git.png" alt="" /></a>
             </div>
         </div>
         </div>
@@ -57,7 +57,7 @@ function Projects(){
             <div className="card-body">
                 <h5 className="card-title">Hospital Website</h5>
                 <p className="card-text">Developed a static website using MERN Stack.</p>
-                <a href="#"><img src="/img/git.png" alt="" /></a>
+                <a href="https://github.com/ARUNSNAIR1997/Arun-Hospital.git"><img src="/img/git.png" alt="" /></a>
             </div>
         </div>
         </div>
@@ -71,7 +71,7 @@ function Projects(){
             <div className="card-body">
                 <h5 className="card-title">Travel Website</h5>
                 <p className="card-text">Developed a static website using react.js.</p>
-                <a href="#"><img src="/img/git.png" alt="" /></a>
+                <a href="https://github.com/ARUNSNAIR1997/travel.git"><img src="/img/git.png" alt="" /></a>
             </div>
         </div>
         </div>
